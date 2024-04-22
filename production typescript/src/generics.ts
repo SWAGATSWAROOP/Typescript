@@ -70,4 +70,25 @@ function anotherfunc<T,U extends number>(val1:T,val2:U){
 
 anotherfunc(3,8.9)
 
+interface Quiz{
+    quizno : number,
+    name: string
+}
+
+interface Course{
+    name:string,
+    corsenod:number
+}
+
+// Generic Classes
+class sellable<T>{
+    public products: T[] = [];
+
+    addtocart = (product: T) :boolean => {
+        this.products.push(product);
+        return true;
+    }
+
+}
+
 
