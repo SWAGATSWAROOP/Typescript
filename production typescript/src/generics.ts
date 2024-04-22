@@ -46,5 +46,28 @@ const getMoreSerachProducts = <T,>(products:Array<T>):T => {
     return products[3];
 }
 
+// Lets say we only want object to be passed
+function anotherFunctioon<T,U>(valOne:T,valTwo:U):object{
+    return {
+        valOne,
+        valTwo
+    }
+}
+
+interface Database{
+    connection : string,
+    username: string,
+    password: string
+}
+
+// But Lets sat we do 
+function anotherfunc<T,U extends number>(val1:T,val2:U){
+    return {
+        val1,
+        val2
+    }
+}
+
+anotherfunc(3,8.9)
 
 
